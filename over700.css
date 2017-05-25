@@ -1,0 +1,26 @@
+.content {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.hero {
+  width: 50%;
+  order: 1;
+}
+
+.weather {
+  width: 50%;
+  order: 2;
+}
+
+.top-news {
+  order: 3;
+}
+
+.scores {
+  order: 4;
+}
+
+.recent-news {
+  order: 5;
+}

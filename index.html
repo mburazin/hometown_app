@@ -7,6 +7,9 @@
     <title>Brighton Times</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" media="screen and (min-width:600px)" href="over600.css">
+    <link rel="stylesheet" media="screen and (min-width:700px)" href="over700.css">
+    <link rel="stylesheet" media="screen and (min-width:900px)" href="over900.css">
   </head>
   <body>
 
@@ -16,6 +19,10 @@
         <h1 class="header__title">
           The Brighton Times
         </h1>
+        <div class="menu">
+          <span>&#9776;</span>
+        </div>
+        </menu>
       </div>
     </header>
 
@@ -178,5 +185,15 @@
         </ul>
       </footer>
     </main>
+
+    <script>
+      var menu = document.querySelector('div.menu');
+      var drawer = document.querySelector('#drawer');
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+    </script>
   </body>
 </html>
