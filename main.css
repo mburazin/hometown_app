@@ -66,6 +66,7 @@ ul {
 .header__logo {
   height: 36px;
   margin-right: 0.3em;
+  margin-left: 0.8em;
   vertical-align: top;
   margin-top: 12px;
 }
@@ -93,7 +94,7 @@ ul {
 
 .nav {
   width: 300px;
-  height: 100%;
+  height: auto;
   position: absolute;
   transform: translate(-300px, 0);
   transition: transform 0.3s ease;
@@ -292,6 +293,7 @@ main {
   display: block;
   font-weight: 300;
   font-size: 1.5em;
+  line-height: 1.5em;
 }
 
 .weather__desc {
