@@ -4,9 +4,10 @@
 }
 
 .header__title {
-  font-size: 4em;
+  font-size: 3em;
 }
 
+/* Navigation bar now appears at the top below the header */
 .nav {
   width: 100%;
   height: auto;
@@ -21,6 +22,7 @@
   display: flex;
 }
 
+/* Make "hamburger" icon disappear */
 .menu {
   display: none;
 }

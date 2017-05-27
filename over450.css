@@ -1,0 +1,21 @@
+.snippet__thumbnail {
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+}
+
+.snippet__article {
+  width: 70%;
+  padding-left: 1em;
+}
+
+/* list of links in footer centered in one line */
+footer ul {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+footer li {
+  line-height: 1.2em;
+}

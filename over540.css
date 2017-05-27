@@ -1,0 +1,4 @@
+/* "location" column in the "scores" table appears */
+.scores__location {
+  display: table-cell;
+}

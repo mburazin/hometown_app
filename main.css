@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -7,7 +11,8 @@ body, html {
 
 body {
   font-family: Roboto;
-  font-size: 12px;
+  font-size: 16px;
+  line-height: 1.2em;
   color: #424242;
 }
 
@@ -68,6 +73,7 @@ ul {
 .header__title {
   font-weight: 300;
   font-size: 2em;
+  line-height: 1em;
   margin: 0.5em 0.25em;
   color: #212121;
   flex-grow: 1;
@@ -167,7 +173,7 @@ main {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   bottom: 0;
-  height: 40%;
+  height: auto;
   width: 100%;
   color: #fff;
   padding: 1em;
@@ -227,6 +233,7 @@ main {
 .scores {
   width: 100%;
   padding-top: 1em;
+  overflow-x: auto;
 }
 
 .scores__table {
@@ -264,6 +271,10 @@ main {
 .scores__table td:nth-child(2),
 .scores__table td:nth-child(5) {
   text-align: center;
+}
+
+.scores__location {
+  display: none;
 }
 
 /*
@@ -332,14 +343,46 @@ main {
 }
 
 .snippet {
-  clear: both;
+  display: flex;
+  flex-flow: row wrap;
   margin: 24px 0;
 }
 
 .snippet__thumbnail {
-  width: 100px;
-  float: left;
-  margin-right: 1em;
+  display: none; /* visible only on >600px widths */
+  width: 30%;
+  height: 100%;
+}
+
+.snippet__article {
+  width: 100%;
+}
+
+/* The following 3 styles for paragraph is a dirty trick used for ellipsis (...) */
+.snippet__article p {
+  overflow: hidden;
+  position: relative;
+  max-height: 4.8em; /* line-height(1.2) * lines max number(4) */
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+}
+
+.snippet__article p:before {
+  content: '...';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.snippet__article p:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  background: white;
 }
 
 .snippet__title {
@@ -369,14 +412,10 @@ footer {
   width: 100%;
 }
 
-footer ul {
-  display: flex;
-  justify-content: center;
-}
-
 footer li {
-  display: inline-block;
+  display: block;
   margin: 0 1em;
+  line-height: 1.5em;
 }
 
 footer a {
